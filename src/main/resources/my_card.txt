@@ -1,0 +1,12 @@
+BASIC
+Durant
+110
+GRASS
+NULL
+1/Energy Digging/50,2G/Bite/50
+FIRE
+NULL
+2
+Lost Abyss
+F
+Дубов/Артем/Алексеевич/БСБО-04-23
