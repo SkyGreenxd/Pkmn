@@ -8,6 +8,7 @@ public class CardExport {
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
         objectOutputStream.writeObject(myCard);
+
     }
 
 }
