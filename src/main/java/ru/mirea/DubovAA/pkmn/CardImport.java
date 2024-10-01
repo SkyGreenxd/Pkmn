@@ -35,6 +35,7 @@ public class CardImport {
         catch (IOException e) {
             throw new RuntimeException(e);
         }
+
         return cardPokemon;
     }
 
