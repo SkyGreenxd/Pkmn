@@ -49,6 +49,7 @@ public class CardImport {
 
         return array;
     }
+
     private static Student getStudent(String s) {
         Student student = new Student();
 
