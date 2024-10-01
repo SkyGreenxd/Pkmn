@@ -3,7 +3,7 @@ package ru.mirea.DubovAA.pkmn;
 import java.io.*;
 
 public class CardExport {
-    public static void CardExport(Card myCard) throws IOException {
+    public static void сardExport(Card myCard) throws IOException {
         File file = new File(myCard.getName() + ".crd");
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
