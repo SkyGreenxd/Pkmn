@@ -1,8 +1,10 @@
-package ru.mirea.DubovAA.pkmn;
+package ru.mirea.pkmn;
+
 
 import java.io.Serializable;
 
 public class AttackSkill implements Serializable {
+    public static final long serialVersionUID = 1L;
     private String name;
     private String description;
     private String cost;
@@ -13,6 +15,8 @@ public class AttackSkill implements Serializable {
         this.description = description;
         this.cost = cost;
         this.damage = damage;
+    }
+    public AttackSkill() {
     }
 
     public String getName() {
@@ -49,11 +53,11 @@ public class AttackSkill implements Serializable {
 
     @Override
     public String toString() {
-        return "AttackSkill{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", cost='" + cost + '\'' +
-                ", damage=" + damage +
-                '}';
+        return "{" +
+                "\"name\":\"" + name + '\"' +
+                ", \"description\":\"" + description + '\"' +
+                ", \"cost\":\"" + cost + '\"' +
+                ", \"damage\":\"" + damage +
+                "\"}";
     }
 }

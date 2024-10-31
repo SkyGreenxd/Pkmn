@@ -1,11 +1,11 @@
-package ru.mirea.DubovAA.pkmn;
+package ru.mirea.pkmn;
 
 public enum EnergyType {
     FIRE,
     GRASS,
     WATER,
     LIGHTNING,
-    PHYSIC,
+    PSYCHIC,
     FIGHTING,
     DARKNESS,
     METAL,

@@ -1,14 +1,15 @@
-package ru.mirea.DubovAA.pkmn;
+package ru.mirea.pkmn;
 
 import java.io.Serializable;
 import java.util.List;
 
 public class Card implements Serializable {
+    public static final long serialVersionUID = 1L;
     private PokemonStage pokemonStage;
     private String name;
     private int hp;
     private EnergyType pokemonType;
-    private Card evolvesForm;
+    private Card evolvesFrom;
     private List <AttackSkill> skills;
     private EnergyType weaknessType;
     private EnergyType resistanceType;
@@ -16,13 +17,14 @@ public class Card implements Serializable {
     private String gameSet;
     private char regulationMark;
     private Student pokemonOwner;
+    private int number;
 
-    public Card(PokemonStage pokemonStage, String name, int hp, EnergyType pokemonType, Card evolvesForm, List<AttackSkill> skills, EnergyType weaknessType, EnergyType resistanceType, String retreatCost, String gameSet, char regulationMark, Student pokemonOwner) {
+    public Card(PokemonStage pokemonStage, String name, int hp, EnergyType pokemonType, Card evolvesFrom, List<AttackSkill> skills, EnergyType weaknessType, EnergyType resistanceType, String retreatCost, String gameSet, char regulationMark, Student pokemonOwner, int number) {
         this.pokemonStage = pokemonStage;
         this.name = name;
         this.hp = hp;
         this.pokemonType = pokemonType;
-        this.evolvesForm = evolvesForm;
+        this.evolvesFrom = evolvesFrom;
         this.skills = skills;
         this.weaknessType = weaknessType;
         this.resistanceType = resistanceType;
@@ -30,6 +32,7 @@ public class Card implements Serializable {
         this.gameSet = gameSet;
         this.regulationMark = regulationMark;
         this.pokemonOwner = pokemonOwner;
+        this.number = number;
     }
 
     public Card() {
@@ -68,12 +71,12 @@ public class Card implements Serializable {
         this.pokemonType = pokemonType;
     }
 
-    public Card getEvolvesForm() {
-        return evolvesForm;
+    public Card getEvolvesFrom() {
+        return evolvesFrom;
     }
 
-    public void setEvolvesForm(Card evolvesForm) {
-        this.evolvesForm = evolvesForm;
+    public void setEvolvesFrom(Card evolvesFrom) {
+        this.evolvesFrom = evolvesFrom;
     }
 
     public List<AttackSkill> getSkills() {
@@ -132,6 +135,13 @@ public class Card implements Serializable {
         this.pokemonOwner = pokemonOwner;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
 
 
     @Override
@@ -141,7 +151,7 @@ public class Card implements Serializable {
                 ", name='" + name + '\'' +
                 ", hp=" + hp +
                 ", pokemonType=" + pokemonType +
-                ", evolvesForm=" + evolvesForm +
+                ", evolvesFrom=" + evolvesFrom +
                 ", skills=" + skills +
                 ", weaknessType=" + weaknessType +
                 ", resistanceType=" + resistanceType +
@@ -149,6 +159,7 @@ public class Card implements Serializable {
                 ", gameSet='" + gameSet + '\'' +
                 ", regulationMark=" + regulationMark +
                 ", pokemonOwner=" + pokemonOwner +
+                ", number=" + number +
                 '}';
     }
 }

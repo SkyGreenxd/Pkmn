@@ -1,4 +1,4 @@
-package ru.mirea.DubovAA.pkmn;
+package ru.mirea.pkmn;
 
 public enum PokemonStage {
     BASIC,

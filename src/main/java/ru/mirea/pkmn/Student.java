@@ -1,8 +1,9 @@
-package ru.mirea.DubovAA.pkmn;
+package ru.mirea.pkmn;
 
 import java.io.Serializable;
 
 public class Student implements Serializable {
+    public static final long serialVersionUID = 1L;
     private String firstName;
     private String surName;
     private String familyName;
@@ -39,7 +40,7 @@ public class Student implements Serializable {
         return familyName;
     }
 
-    public void setFamilyName(String familyNAme) {
+    public void setFamilyName(String familyName) {
         this.familyName = familyName;
     }
 
