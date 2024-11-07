@@ -161,7 +161,7 @@ public class DatabaseServiceImpl implements DatabaseService {
                 ResultSet rs = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
                         ResultSet.CONCUR_UPDATABLE).executeQuery(tmp);
                 rs.last();
-                query.append("'").append(rs.getObject("id")).append("', ");
+                query.append(rs.getObject("id")).append("', ");
             }catch (Exception e){
                 query.append("'").append(createPokemonOwner(card.getPokemonOwner())).append("', ");
             }
@@ -187,6 +187,7 @@ public class DatabaseServiceImpl implements DatabaseService {
         query.append(card.getNumber());
         query.append(");");
 
+        System.out.println(queryBase.toString() + query.toString());
         try {
             connection.createStatement().executeUpdate(queryBase.toString() + query.toString());
         } catch (SQLException e) {
