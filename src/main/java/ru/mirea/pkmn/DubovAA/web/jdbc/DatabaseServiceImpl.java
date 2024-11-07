@@ -42,8 +42,8 @@ public class DatabaseServiceImpl implements DatabaseService {
             ResultSet resultSet = statement.executeQuery(query);
 
             if (resultSet.next()) {
-                UUID evolves_from = (UUID) resultSet.getObject("evolves_from");
                 card.setName(resultSet.getString("name"));
+                UUID evolves_from = (UUID) resultSet.getObject("evolves_from");
                 card.setEvolvesFrom(evolves_from == null ? null : getCardFromDatabase(evolves_from));
                 card.setNumber(Integer.parseInt(resultSet.getString("card_number")));
                 card.setHp(resultSet.getInt("hp"));
